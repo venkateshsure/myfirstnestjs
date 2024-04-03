@@ -11,7 +11,8 @@ export class UserService {
   } 
 
   getUser(email:string):User[]{
-    return this.users.filter(i=>i.email===email)
+    const singleUser=this.users.filter(i=>i.email===email)
+    return singleUser
   }
 
   addUser(user:User): User{
